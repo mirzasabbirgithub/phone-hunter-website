@@ -1,5 +1,6 @@
 const searchPhones = () => {
           document.getElementById('search-result').innerHTML = ''
+          document.getElementById('phone-detials').innerHTML = ''
           const searchField = document.getElementById('search-field');
           const searchText = searchField.value;
           searchField.value = '';
@@ -35,24 +36,23 @@ const displaySearchResult = phones => {
 }
 
 const loadPhoneDetials = id => {
+          document.getElementById('phone-detials').innerHTML = ''
           const url = `https://openapi.programming-hero.com/api/phone/${id}`;
           fetch(url)
                     .then(res => res.json())
                     .then(data => displayPhoneDetials(data.data));
 }
 
-
-
 const displayPhoneDetials = phone => {
           const phoneDetials = document.getElementById('phone-detials');
           const div = document.createElement('div');
           div.classList.add('card');
           div.innerHTML = `
-          <div class="card w-50 mx-auto">
+          <div class="card w-100 mx-auto ">
           <img src="${phone.image}" class="card-img-top img-fluid" alt="...">
           <div class="card-body">
                     <h5 class="card-title">${phone.name}</h5>   
-                    <p class="card-text">${phone.releaseDate}</p>
+                    <p class="card-text">${phone.releaseDate}</p >
                     <p class="card-text">Id: ${phone.slug}</p>
                     <h4 class="card-text">Main Features</h4>
                     <p class="card-text">ChipSet: ${phone.mainFeatures.chipSet}</p>
@@ -68,8 +68,8 @@ const displayPhoneDetials = phone => {
                     <p class="card-text">NFC: ${phone.others.NFC}</p>
                     <p class="card-text">USB: ${phone.others.USB}</p>
 
-          </div>
-</div>
- `;
+          </div >
+</div >
+          `;
           phoneDetials.appendChild(div);
 }
