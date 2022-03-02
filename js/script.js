@@ -17,7 +17,7 @@ const searchPhones = () => {
 const displaySearchResult = phones => {
           const searchResult = document.getElementById('search-result');
           //error message -- if phone not found
-          if (phones == '') {
+          if (phones === '') {
                     const search = document.getElementById('search-result');
                     search.textContent = '';
                     const message = document.getElementById('no-result')
