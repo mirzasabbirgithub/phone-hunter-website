@@ -13,9 +13,10 @@ const searchPhones = () => {
 
 }
 
+// show search result to consumer
 const displaySearchResult = phones => {
           const searchResult = document.getElementById('search-result');
-          //error message if phone not found
+          //error message -- if phone not found
           if (phones == '') {
                     const search = document.getElementById('search-result');
                     search.textContent = '';
@@ -60,7 +61,7 @@ const loadPhoneDetials = id => {
           window.scrollTo(0, 0); //scroll to the upper section
 }
 
-// display phone detials
+// display phone detials to consumer
 const displayPhoneDetials = phone => {
           const phoneDetials = document.getElementById('phone-detials');
           const div = document.createElement('div');
