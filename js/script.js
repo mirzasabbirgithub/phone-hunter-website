@@ -23,7 +23,7 @@ const displaySearchResult = phones => {
                     const div = document.createElement('div');
                     div.classList.add('container');
                     div.innerHTML = `
-                    <h3 class="text-center text-danger">No phone found!</h3>
+                    <h3 class="text-center text-light">No phone found!</h3>
                     `
                     message.textContent = '';
                     message.appendChild(div);
@@ -66,8 +66,8 @@ const displayPhoneDetials = phone => {
           const div = document.createElement('div');
           div.classList.add('card');
           div.innerHTML = `
-          <div class="card w-100 mx-auto ">
-          <img src="${phone.image}" class="card-img-top img-fluid" alt="...">
+          <div class="card w-100 mx-auto  ">
+          <img src="${phone.image}" class="card-img-top img-fluid " alt="...">
           <div class="card-body">
                     <h5 class="card-title">${phone.name}</h5>   
                     <p class="card-text">${phone.releaseDate ? phone.releaseDate : "Release date not available"}</p >
