@@ -19,14 +19,17 @@
 
           <!-- upper section -->
           <h2 class="text-center text-success">Search your gadgets</h2>
-          <div class="input-group mb-3 w-50 mx-auto">
+          <div class="input-group col-cols-1 mb-3 w-50 mx-auto">
                     <input id="search-field" type="text" class="form-control" placeholder="Search your phone"
                               aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button onclick="searchPhones()" class="btn btn-outline-secondary" type="button"
                               id="button-search">Search</button>
 
+          </div>
 
-                    <!-- Error message handle -->
+
+
+          <div class="input-group mb-3 w-50 mx-auto">
                     <div class="container bg-alert" id="no-result">
 
                     </div>
@@ -43,13 +46,14 @@
                     <div>
 
                               <!-- basic card section -->
-                              <div id="search-result" class="row row-cols-1 row-cols-md-3 g-5 w-75 mx-auto">
+                              <div id="search-result" class="row row-cols-1 row-cols-md-3 g-5 w-100 mx-auto">
 
                               </div>
 
                     </div>
 
           </div>
+
 
 
           <!-- boostrap js -->
